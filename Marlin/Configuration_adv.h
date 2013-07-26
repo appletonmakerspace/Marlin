@@ -5,6 +5,9 @@
 //=============================Thermal Settings  ============================
 //===========================================================================
 
+// Select one of these only to define how the bed temp is read.
+//
+//#define BED_LIMIT_SWITCHING
 #ifdef BED_LIMIT_SWITCHING
   #define BED_HYSTERESIS 2 //only disable heating if T>target+BED_HYSTERESIS and enable heating if T>target-BED_HYSTERESIS
 #endif
@@ -175,9 +178,9 @@
 #define X_HOME_RETRACT_MM 5 
 #define Y_HOME_RETRACT_MM 5 
 #define Z_HOME_RETRACT_MM 1 
-//#define QUICK_HOME  //if this is defined, if both x and y are to be homed, a diagonal move will be performed initially.
+#define QUICK_HOME  //if this is defined, if both x and y are to be homed, a diagonal move will be performed initially.
 
-#define AXIS_RELATIVE_MODES {false, false, false, false}
+#define AXIS_RELATIVE_MODES {false, false, false, true}
 
 #define MAX_STEP_FREQUENCY 40000 // Max step frequency for Ultimaker (5000 pps / half step)
 
@@ -272,7 +275,7 @@ const unsigned int dropsegments=5; //everything with less than this number of st
 // You can get round this by connecting a push button or single throw switch to the pin defined as SDCARDCARDDETECT 
 // in the pins.h file.  When using a push button pulling the pin to ground this will need inverted.  This setting should
 // be commented out otherwise
-#define SDCARDDETECTINVERTED 
+//#define SDCARDDETECTINVERTED 
 
 #ifdef ULTIPANEL
  #undef SDCARDDETECTINVERTED
