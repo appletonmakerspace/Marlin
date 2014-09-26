@@ -338,6 +338,7 @@ sym: $(BUILD_DIR)/$(TARGET).sym
 # Program the device.
 # Do not try to reset an arduino if it's not one
 upload: $(BUILD_DIR)/$(TARGET).hex
+	echo on the mendel 90, make sure the reset junmper is on
 ifeq (${AVRDUDE_PROGRAMMER}, arduino)
 	stty hup < $(UPLOAD_PORT); true
 endif

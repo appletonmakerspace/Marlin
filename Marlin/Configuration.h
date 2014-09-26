@@ -186,9 +186,9 @@
 
 // If you are using a preconfigured hotend then you can use one of the value sets by uncommenting it
 // autotuned arount 210c
-    #define  DEFAULT_Kp 23
-    #define  DEFAULT_Ki 2  
-    #define  DEFAULT_Kd 70  
+    #define  DEFAULT_Kp 21
+    #define  DEFAULT_Ki 1.6 
+    #define  DEFAULT_Kd 67.8  
 
 // Ultimaker
 //    #define  DEFAULT_Kp 22.2
@@ -350,7 +350,7 @@ const bool Z_ENDSTOPS_INVERTING = false; // set to true to invert the logic of t
 #define HOMING_FEEDRATE {50*60, 50*60, 4*60, 0}  // set the homing speeds (mm/min)
 
 // default settings 
-#define DEFAULT_AXIS_STEPS_PER_UNIT   {80,80,200*16/1,604.5}  // Mendel90 with Wades and Stoffel15 bolt 
+#define DEFAULT_AXIS_STEPS_PER_UNIT   {80,80,200*16,578}  // Mendel90 
 #define DEFAULT_MAX_FEEDRATE          {400, 400, 4, 30}    // (mm/sec)
 #define DEFAULT_MAX_ACCELERATION      {2000,2000,150,5000}    // X, Y, Z, E maximum start speed for accelerated moves. E default values are good for skeinforge 40+, for older versions raise them a lot.
 
